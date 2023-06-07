@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<room_id>25198571</room_id>
+	<ws_server_url>wss://broadcastlv.chat.bilibili.com:2245/sub</ws_server_url>
+	<qr_code_path>login_bili.png</qr_code_path>
+</config>
