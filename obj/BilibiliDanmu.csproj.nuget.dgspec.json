@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WorkSpace\\XboxGameBarSamples\\Samples\\BilibiliDanmu\\BilibiliDanmu.csproj": {}
+    "D:\\WorkSpace\\BilibiliDanmu\\BilibiliDanmu.csproj": {}
   },
   "projects": {
-    "D:\\WorkSpace\\XboxGameBarSamples\\Samples\\BilibiliDanmu\\BilibiliDanmu.csproj": {
+    "D:\\WorkSpace\\BilibiliDanmu\\BilibiliDanmu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WorkSpace\\XboxGameBarSamples\\Samples\\BilibiliDanmu\\BilibiliDanmu.csproj",
+        "projectUniqueName": "D:\\WorkSpace\\BilibiliDanmu\\BilibiliDanmu.csproj",
         "projectName": "BilibiliDanmu",
-        "projectPath": "D:\\WorkSpace\\XboxGameBarSamples\\Samples\\BilibiliDanmu\\BilibiliDanmu.csproj",
+        "projectPath": "D:\\WorkSpace\\BilibiliDanmu\\BilibiliDanmu.csproj",
         "packagesPath": "C:\\Users\\Yan_Li1\\.nuget\\packages\\",
-        "outputPath": "D:\\WorkSpace\\XboxGameBarSamples\\Samples\\BilibiliDanmu\\obj\\",
+        "outputPath": "D:\\WorkSpace\\BilibiliDanmu\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [

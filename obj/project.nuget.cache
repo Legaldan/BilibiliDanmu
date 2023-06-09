@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H4+sq0IzrdRzoIAheqsGm0Q36yVPtFpWI0ciWDA3aJUgPYXVWjvYyCiNCCFJT0AWXVvaZbm3cpnrhGdLo+/Y2Q==",
+  "dgSpecHash": "L2q2Y6pc3ckeNx8slIHgDoojUOU0qYoWmR8LSf/0+h3C2yoSzpPz+kRygr2YUA3LFvUQfsQUGgzrg7GPcDvf6Q==",
   "success": true,
-  "projectFilePath": "D:\\WorkSpace\\XboxGameBarSamples\\Samples\\BilibiliDanmu\\BilibiliDanmu.csproj",
+  "projectFilePath": "D:\\WorkSpace\\BilibiliDanmu\\BilibiliDanmu.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Yan_Li1\\.nuget\\packages\\microsoft.gaming.xboxgamebar\\5.8.220627001\\microsoft.gaming.xboxgamebar.5.8.220627001.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\2.2.12-rel-31116-00\\microsoft.net.native.compiler.2.2.12-rel-31116-00.nupkg.sha512",

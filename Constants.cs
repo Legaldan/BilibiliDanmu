@@ -10,5 +10,6 @@ namespace BilibiliDanmu
     {
         public const string GET_LOGIN_URL = "https://passport.bilibili.com/qrcode/getLoginUrl";
         public const string GET_LOGIN_INFO = "https://passport.bilibili.com/qrcode/getLoginInfo?oauthKey=";
+
     }
 }
