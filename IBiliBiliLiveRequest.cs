@@ -43,6 +43,11 @@ namespace Liluo.BiliBiliLive
         event Action<BiliBiliLiveSuperChatData> OnSuperChatCallBack;
 
         /// <summary>
+        /// 监听进入房间回调函数
+        /// </summary>
+        event Action<string> OnEnterRoomCallBack;
+
+        /// <summary>
         /// 监听运行出错时回调函数
         /// </summary>
         event Action<Exception> OnErrorCallBack;

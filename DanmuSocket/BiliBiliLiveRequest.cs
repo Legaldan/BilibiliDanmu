@@ -58,6 +58,7 @@ namespace Liluo.BiliBiliLive
         public event Action<BiliBiliLiveGiftData> OnGiftCallBack;
         public event Action<BiliBiliLiveGuardData> OnGuardCallBack;
         public event Action<BiliBiliLiveSuperChatData> OnSuperChatCallBack;
+        public event Action<string> OnEnterRoomCallBack;
         public event Action<Exception> OnErrorCallBack;
         public event Action OnDisconnectCallBack;
 
@@ -265,6 +266,13 @@ namespace Liluo.BiliBiliLive
                                     superChatData.price = obj["data"]["price"].ToObject<decimal>();
                                     superChatData.keepTime = obj["data"]["time"].ToObject<int>();
                                     OnSuperChatCallBack?.Invoke(superChatData);
+                                    break;
+                                }
+                            case "WELCOME":
+                            case "WELCOME_GUARD":
+                            case "ENTRY_EFFECT":
+                                {
+                                    OnEnterRoomCallBack?.Invoke(obj["data"]["user_info"]["uname"].ToString());
                                     break;
                                 }
                             default:

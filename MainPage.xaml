@@ -10,6 +10,7 @@
     <Grid x:Name="backgroundGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
         <Image x:Name="imgQRCode" Width="300" Height="300" />
         <!--<Canvas x:Name="danmuCanvas" VerticalAlignment="Bottom" Background="Gray" Visibility="Collapsed" />-->
+        <!--<TextBlock x:Name="currentNum" FontSize="14" FontWeight="Bold" Foreground="White" Text="test" Height="20" VerticalAlignment="Top"/>-->
         <ScrollViewer x:Name="danmuScrollViewer" Background="DimGray"  VerticalScrollBarVisibility="Hidden">
             <StackPanel x:Name="danmuStackPanel" Orientation="Vertical" />
         </ScrollViewer>

@@ -147,6 +147,7 @@ namespace BilibiliDanmu
             req.OnDanmuCallBack += GetDanmu;
             req.OnGiftCallBack += GetGift;
             req.OnSuperChatCallBack += GetSuperChat;
+            req.OnEnterRoomCallBack += GetEnterRoom;
             req.OnRoomViewer += number =>
             {
                 Debug.WriteLine($"当前房间人数为: {number}");
@@ -228,6 +229,14 @@ namespace BilibiliDanmu
         public async void GetSuperChat(BiliBiliLiveSuperChatData data)
         {
             danmuQueue.Enqueue($"{data.username} : {data.content}, 金额: {data.price}");
+        }
+
+        /// <summary>
+        /// 进入房间的回调
+        /// </summary>
+        public async void GetEnterRoom(string username)
+        {
+            danmuQueue.Enqueue($"{username} 进入房间");
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
