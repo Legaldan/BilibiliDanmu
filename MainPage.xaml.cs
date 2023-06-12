@@ -30,6 +30,8 @@ using System.Threading;
 using Windows.UI.Core;
 using ZXing.QrCode.Internal;
 using System.Text;
+using System.Net.WebSockets;
+using Liluo.BiliBiliLive;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -56,10 +58,11 @@ namespace BilibiliDanmu
 
         private DispatcherTimer danmuTimer;
 
+        IBiliBiliLiveRequest req;
+
         public MainPage()
         {
             this.InitializeComponent();
-            this.Loaded += MainPage_Loaded;
         }
 
         private async Task<ConfigModel> InitConfigAsync()
@@ -89,9 +92,18 @@ namespace BilibiliDanmu
             // you will need access to the XboxGameBarWidget, in this case it was passed as a parameter when navigating to the widget page, your implementation may differ.
             widget = e.Parameter as XboxGameBarWidget;
 
+            if (bilibliClient == null)
+            {
+                bilibliClient = new User();
+            }
+
+            if (danmuQueue == null)
+            {
+                danmuQueue = new Queue<string>();
+            }
+
             if (widget != null)
             {
-                widget.RequestedOpacityChanged += Widget_RequestedOpacityChanged;
                 widgetControl = new XboxGameBarWidgetControl(widget);
                 // Hook up events for when the ui is updated.
                 widget.RequestedOpacityChanged += Widget_RequestedOpacityChanged;
@@ -99,33 +111,46 @@ namespace BilibiliDanmu
         
             // 读取配置文件
             config = await InitConfigAsync();
+            Task<ClientWebSocket> liveRoomClient = null;
             try
             {
-                //// 扫描登录二维码
+                // 扫描登录二维码
                 //loginUrl = await bilibliClient.GetLoginUrl();
                 //BitmapImage qrBitMap = await QRCodeUtils.GenerateQRCode(loginUrl.url, 100, 100, config.QrCodePath);
                 //imgQRCode.Source = qrBitMap;
 
-                //// 在页面加载完成后检查用户登录情况
+                // 在页面加载完成后检查用户登录情况
                 //LoginInfoData loginInfo = await bilibliClient.GetLoginInfo(loginUrl.oauthKey);
                 //Debug.WriteLine("login succ! loginInfo is" + loginInfo.ToString());
 
-                //// 登录成功了改变页面样式等等
+                // 登录成功了改变页面样式等等
                 imgQRCode.Visibility = Visibility.Collapsed;
                 backgroundGrid.Opacity = 0.6;
 
                 // 初始化读取弹幕机
-                initDanmuShower2();
+                InitDanmuShower();
 
-                //initLiveRoom();
-
-                Task.Run(TestDamu);
+                // 连接弹幕服务器
+                StartLiveRoom(int.Parse(config.RoomId));
 
             } 
-            catch (ApplicationException ex)
+            catch (Exception ex)
             {
-                //do nothing
+                
             }
+        }
+
+        private async void StartLiveRoom(int RoomID)
+        {
+            // 创建一个监听对象
+            req = await BiliBiliLive.Connect(RoomID);
+            req.OnDanmuCallBack += GetDanmu;
+            req.OnGiftCallBack += GetGift;
+            req.OnSuperChatCallBack += GetSuperChat;
+            req.OnRoomViewer += number =>
+            {
+                Debug.WriteLine($"当前房间人数为: {number}");
+            };
         }
 
         private void TestDamu()
@@ -139,96 +164,18 @@ namespace BilibiliDanmu
             } while (true);
         }
 
-        //private async void initLiveRoom()
-        //{
-        //    IBApiClient bApiClient = new BApiClient();
-
-        //    var startInfo = new AppStartInfo();
-
-        //    WebSocketBLiveClient m_WebSocketBLiveClient;
-        //    //获取房间信息
-        //    startInfo = await bApiClient.StartInteractivePlay("12402729", "1687655979180");
-        //    if (startInfo?.Code != 0)
-        //    {
-        //        Console.WriteLine(startInfo?.Message);
-        //        return;
-        //    }
-
-
-        //    m_WebSocketBLiveClient = new WebSocketBLiveClient(startInfo.GetWssLink(), startInfo.GetAuthBody());
-        //    m_WebSocketBLiveClient.OnDanmaku += WebSocketBLiveClientOnDanmaku;
-        //    m_WebSocketBLiveClient.OnGift += WebSocketBLiveClientOnGift;
-        //    m_WebSocketBLiveClient.OnGuardBuy += WebSocketBLiveClientOnGuardBuy;
-        //    m_WebSocketBLiveClient.OnSuperChat += WebSocketBLiveClientOnSuperChat;
-        //    //m_WebSocketBLiveClient.Connect();
-        //    m_WebSocketBLiveClient.Connect(TimeSpan.FromSeconds(30));
-        //}
-
-        private void MainPage_Loaded(object sender, RoutedEventArgs e)
-        {
-            bilibliClient = new User();
-            danmuQueue = new Queue<string>();
-        }
-
         private async void Widget_RequestedOpacityChanged(XboxGameBarWidget sender, object args)
         {
             await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
             {
-                backgroundGrid.Opacity = widget.RequestedOpacity;
+                if (widget != null)
+                {
+                    backgroundGrid.Opacity = widget.RequestedOpacity;
+                }
             });
         }
 
-        //private void WebSocketBLiveClientOnSuperChat(SuperChat superChat)
-        //{
-        //    StringBuilder sb = new StringBuilder("收到SC!");
-        //    sb.AppendLine();
-        //    sb.Append("来自用户：");
-        //    sb.AppendLine(superChat.userName);
-        //    sb.Append("留言内容：");
-        //    sb.AppendLine(superChat.message);
-        //    sb.Append("金额：");
-        //    sb.Append(superChat.rmb);
-        //    sb.Append("元");
-        //    Logger.Log(sb.ToString());
-        //}
-
-        //private void WebSocketBLiveClientOnGuardBuy(Guard guard)
-        //{
-        //    StringBuilder sb = new StringBuilder("收到大航海!");
-        //    sb.AppendLine();
-        //    sb.Append("来自用户：");
-        //    sb.AppendLine(guard.userInfo.userName);
-        //    sb.Append("赠送了");
-        //    sb.Append(guard.guardUnit);
-        //    Logger.Log(sb.ToString());
-        //}
-
-        //private void WebSocketBLiveClientOnGift(SendGift sendGift)
-        //{
-        //    StringBuilder sb = new StringBuilder("收到礼物!");
-        //    sb.AppendLine();
-        //    sb.Append("来自用户：");
-        //    sb.AppendLine(sendGift.userName);
-        //    sb.Append("赠送了");
-        //    sb.Append(sendGift.giftNum);
-        //    sb.Append("个");
-        //    sb.Append(sendGift.giftName);
-        //    Logger.Log(sb.ToString());
-        //}
-
-        //private void WebSocketBLiveClientOnDanmaku(Dm dm)
-        //{
-        //    StringBuilder sb = new StringBuilder("收到弹幕!");
-        //    sb.AppendLine();
-        //    sb.Append("用户：");
-        //    sb.AppendLine(dm.userName);
-        //    sb.Append("弹幕内容：");
-        //    sb.Append(dm.msg);
-        //    Logger.Log(sb.ToString());
-        //    danmuQueue.Enqueue(sb.ToString());
-        //}
-
-        private void initDanmuShower2()
+        private void InitDanmuShower()
         {
             // 定义一个定时器，每隔一段时间读取一个弹幕文本并追加到 TextBlock 控件中
             DispatcherTimer timer = new DispatcherTimer();
@@ -238,22 +185,55 @@ namespace BilibiliDanmu
                 if (danmuQueue.Count > 0)
                 {
                     // 滚动到最底部
-                    danmuScrollViewer.ChangeView(null, danmuScrollViewer.ExtentHeight, null);
                     string danmuText = danmuQueue.Dequeue();
-                    TextBlock danmuBlock = new TextBlock();
-                    danmuBlock.Text = danmuText;
-                    danmuBlock.Margin = new Thickness(10, 10, 0, 0);
-                    danmuBlock.Foreground = new SolidColorBrush(Colors.White);
-                    danmuBlock.FontSize = 14;
-                    danmuBlock.TextWrapping = TextWrapping.Wrap;
+                    TextBlock danmuBlock = new TextBlock
+                    {
+                        Text = danmuText,
+                        Margin = new Thickness(5, 0, 5, 10),
+                        Foreground = new SolidColorBrush(Colors.White),
+                        FontSize = 12,
+                        FontWeight = FontWeights.Bold,
+                        TextWrapping = TextWrapping.Wrap
+                    };
                     danmuStackPanel.Children.Add(danmuBlock);
                     // 滚动到最底部
-                    danmuScrollViewer.ChangeView(null, danmuScrollViewer.ExtentHeight, null);
+                    danmuScrollViewer.UpdateLayout();
+                    danmuScrollViewer.ChangeView(null, danmuScrollViewer.ScrollableHeight, null);
                 }
             };
 
             // 启动定时器
             timer.Start();
+        }
+
+        /// <summary>
+        /// 接收到礼物的回调
+        /// </summary>
+        public async void GetGift(BiliBiliLiveGiftData data)
+        {
+            danmuQueue.Enqueue($"{data.username}, 礼物名: {data.giftName}, 数量: {data.num}, 总价: {data.total_coin}");
+        }
+
+        /// <summary>
+        /// 接收到弹幕的回调
+        /// </summary>
+        public async void GetDanmu(BiliBiliLiveDanmuData data)
+        {
+            danmuQueue.Enqueue($"{data.username} : {data.content}");
+        }
+
+        /// <summary>
+        /// 接收到SC的回调
+        /// </summary>
+        public async void GetSuperChat(BiliBiliLiveSuperChatData data)
+        {
+            danmuQueue.Enqueue($"{data.username} : {data.content}, 金额: {data.price}");
+        }
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            base.OnNavigatedFrom(e);
+            req.DisConnect();
         }
 
         //private void initDanmuShower()

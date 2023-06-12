@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>D:\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>D:\WorkSpace\BilibiliDanmu\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>74450E9E5F0420EDC29D1BC67ABF53B278E3F4C8D66659C74F92971D7AA6301B</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>18B512F3A42A59938A786F8657F5AD2E51BA5C9215DF5A1D7282FD29BBE6347C</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>BilibiliDanmu_1.0.0.0_x64__myfgsnh5pmw7j</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>BilibiliDanmu_myfgsnh5pmw7j!App</RegisteredUserModeAppID>
     <RegisteredPackageID>BilibiliDanmu</RegisteredPackageID>
@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\WorkSpace\BilibiliDanmu\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-07T10:02:06.455</Modified>
+      <Modified>2023-06-12T09:59:33.743</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\bin\x64\Debug\BilibiliDanmu.exe">
       <PackagePath>entrypoint\BilibiliDanmu.exe</PackagePath>
-      <Modified>2023-06-07T10:02:05.560</Modified>
+      <Modified>2023-06-12T09:59:33.181</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Yan_Li1\.nuget\packages\microsoft.gaming.xboxgamebar\5.8.220627001\runtimes\win10-x64\native\Microsoft.Gaming.XboxGameBar.dll">
       <PackagePath>Microsoft.Gaming.XboxGameBar.dll</PackagePath>
@@ -300,7 +300,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\config.xml">
       <PackagePath>config.xml</PackagePath>
-      <Modified>2023-06-06T03:18:35.873</Modified>
+      <Modified>2023-06-12T09:36:39.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -308,15 +308,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\bin\x64\Debug\BilibiliDanmu.xr.xml">
       <PackagePath>BilibiliDanmu.xr.xml</PackagePath>
-      <Modified>2023-06-07T07:44:46.118</Modified>
+      <Modified>2023-06-12T03:45:46.429</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2023-06-07T10:02:05.463</Modified>
+      <Modified>2023-06-12T09:59:33.066</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2023-06-07T10:02:05.464</Modified>
+      <Modified>2023-06-12T09:59:33.066</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -332,11 +332,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-06-07T07:19:05.625</Modified>
+      <Modified>2023-06-12T09:37:17.852</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\bin\x64\Debug\Core\BilibiliDanmu.exe">
       <PackagePath>BilibiliDanmu.exe</PackagePath>
-      <Modified>2023-06-07T10:02:06.444</Modified>
+      <Modified>2023-06-12T09:59:33.738</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

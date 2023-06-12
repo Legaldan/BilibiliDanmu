@@ -119,8 +119,19 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BiliBiliLive.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="DanmuSocket\BiliBiliLiveRequest.cs" />
+    <Compile Include="DanmuSocket\BitConverter\BigEndianBitConverter.cs" />
+    <Compile Include="DanmuSocket\BitConverter\EndianBitConverter.cs" />
+    <Compile Include="DanmuSocket\BitConverter\LittleEndianBitConverter.cs" />
+    <Compile Include="DanmuSocket\BitConverter\SingleConverter.cs" />
+    <Compile Include="DanmuSocket\Data\BiliBiliLiveDanmuData.cs" />
+    <Compile Include="DanmuSocket\Data\BiliBiliLiveGiftData.cs" />
+    <Compile Include="DanmuSocket\Data\BiliBiliLiveGuardData.cs" />
+    <Compile Include="DanmuSocket\Data\BiliBiliLiveSuperChatData.cs" />
     <Compile Include="Http\User.cs" />
+    <Compile Include="IBiliBiliLiveRequest.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -129,6 +140,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\HttpUtils.cs" />
     <Compile Include="Utils\QRCodeUtils.cs" />
+    <Compile Include="Utils\DanmuHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

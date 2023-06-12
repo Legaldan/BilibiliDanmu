@@ -15,7 +15,6 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
-      <RootProperty Name="Padding" />
       <RootProperty Name="Background" />
       <RootProperty Name="VerticalScrollBarVisibility" />
       <RootProperty Name="Content" />

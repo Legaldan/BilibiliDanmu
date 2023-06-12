@@ -10,7 +10,7 @@
     <Grid x:ConnectionId='2' x:Name="backgroundGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
         <Image x:ConnectionId='3' x:Name="imgQRCode" Width="300" Height="300" />
         <!--<Canvas x:Name="danmuCanvas" VerticalAlignment="Bottom" Background="Gray" Visibility="Collapsed" />-->
-        <ScrollViewer x:ConnectionId='4' Padding="0 0 0 20" x:Name="danmuScrollViewer" Background="DimGray"  VerticalScrollBarVisibility="Auto">
+        <ScrollViewer x:ConnectionId='4' x:Name="danmuScrollViewer" Background="DimGray"  VerticalScrollBarVisibility="Hidden">
             <StackPanel x:ConnectionId='5' x:Name="danmuStackPanel" Orientation="Vertical" />
         </ScrollViewer>
 
