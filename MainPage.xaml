@@ -5,7 +5,8 @@
     xmlns:local="using:BilibiliDanmu"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Opacity="0.8">
 
     <Grid x:Name="backgroundGrid">
         <!--<Image x:Name="imgQRCode" Width="300" Height="300" Visibility="Collapsed" />-->
@@ -25,10 +26,12 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <ScrollViewer x:Name="danmuScrollViewer" Background="DimGray"  VerticalScrollBarVisibility="Hidden">
-            <StackPanel x:Name="danmuStackPanel" Orientation="Vertical" />
+            <StackPanel x:Name="danmuStackPanel" Orientation="Vertical" >
+                <!--<TextBlock Margin="5,0,0,0" FontSize="12" Foreground="#FF7F50" FontWeight="Bold" Text="正在获取当前人数" Height="20" VerticalAlignment="Bottom" Grid.Row="1" />-->
+            </StackPanel>
         </ScrollViewer>
         <Grid Visibility="Collapsed" x:Name="showCountGrid" Grid.Row="1" Background="White">
-            <TextBlock Margin="10,0,0,0" x:Name="currentNum" FontSize="12" FontWeight="Bold" Text="正在获取当前人数" Height="20" VerticalAlignment="Center" Grid.Row="1"/>
+            <TextBlock Margin="5,0,0,0" x:Name="currentNum" FontSize="12" FontWeight="Bold" Text="正在获取当前人数" Height="20" VerticalAlignment="Bottom" Grid.Row="1" />
             <!--currentNum右侧放一个按钮，用来关闭当前webwocket连接，按钮的高度和currentNum一样，靠右对齐-->
             <Button x:Name="btnClose"  Margin="0,0,0,0" Foreground="Green" VerticalAlignment="Top" Height="20" Grid.Row="1" Click="btnClose_Click" HorizontalAlignment="Right">
                 <TextBlock FontSize="10" Text="关闭连接" Margin="0,-5,0,-5" />

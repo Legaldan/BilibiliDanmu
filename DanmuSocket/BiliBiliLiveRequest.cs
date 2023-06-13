@@ -168,6 +168,7 @@ namespace Liluo.BiliBiliLive
                             catch (Exception e)
                             {
                                 OnErrorCallBack?.Invoke(e);
+                                continue;
                             }
                         }
                     }
@@ -186,6 +187,7 @@ namespace Liluo.BiliBiliLive
                     else
                     {
                         OnErrorCallBack?.Invoke(e);
+                        continue;
                     }
                 }
             }

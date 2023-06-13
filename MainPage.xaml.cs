@@ -102,7 +102,7 @@ namespace BilibiliDanmu
 
                 // 登录成功了改变页面样式等等
                 // imgQRCode.Visibility = Visibility.Collapsed;
-                backgroundGrid.Opacity = 0.7;
+                backgroundGrid.Opacity = 0.8;
 
                 // 初始化读取弹幕机
                 InitDanmuShower();
@@ -123,6 +123,7 @@ namespace BilibiliDanmu
             req.OnSuperChatCallBack += GetSuperChat;
             req.OnEnterRoomCallBack += GetEnterRoom;
             req.OnLikeCallBack += GetLike;
+            req.OnErrorCallBack += GetError;
             req.OnRoomViewer += number =>
             {
                 currentNum.Text = $"当前房间人数为: {number}";
@@ -205,7 +206,7 @@ namespace BilibiliDanmu
                     };
                     if (danmuText.Contains("礼物") || danmuText.Contains("点赞"))
                     {
-                        danmuBlock.Foreground = new SolidColorBrush(Colors.IndianRed);
+                        danmuBlock.Foreground = new SolidColorBrush(Colors.Coral);
                     }
                     danmuStackPanel.Children.Add(danmuBlock);
                     // 滚动到最底部
@@ -256,6 +257,16 @@ namespace BilibiliDanmu
         public async void GetLike(string username)
         {
             danmuQueue.Enqueue($"【点赞】{username} 点赞了直播间");
+        }
+
+        public async void GetError(Exception e)
+        {
+            Debug.WriteLine("出现重大异常: " + e.StackTrace);
+            //if (req != null)
+            //{
+            //    req.DisConnect();
+            //}
+            //StartLiveRoom(int.Parse(txtRoomId.Text));
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
