@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-BAI2560</Machine>
-    <WindowsUser>li</WindowsUser>
+    <Machine>EPCNSZXW006D</Machine>
+    <WindowsUser>Yan_Li1</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,16 +10,16 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>b3b5ca39-0afe-40c9-ba5a-8241831cc079</PackageIdentityName>
     <PackageIdentityPublisher>CN=Yan_Li1</PackageIdentityPublisher>
-    <IntermediateOutputPath>E:\WorkSpace\BilibiliDanmu\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>D:\WorkSpace\BilibiliDanmu\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
-    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>E:\WorkSpace\BilibiliDanmu\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>EAF833CAB19B03E9D8A8D19F15E407FBFA7C1A0013C637A9D63A38B8662CC06B</RegisteredManifestChecksum>
+    <WindowsSdkPath>D:\Windows Kits\10\</WindowsSdkPath>
+    <LayoutDir>D:\WorkSpace\BilibiliDanmu\bin\x64\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>18B512F3A42A59938A786F8657F5AD2E51BA5C9215DF5A1D7282FD29BBE6347C</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>BilibiliDanmu_1.0.0.0_x64__myfgsnh5pmw7j</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>BilibiliDanmu_myfgsnh5pmw7j!App</RegisteredUserModeAppID>
     <RegisteredPackageID>BilibiliDanmu</RegisteredPackageID>
@@ -27,22 +27,22 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="E:\WorkSpace\BilibiliDanmu\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="D:\WorkSpace\BilibiliDanmu\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:54:51.066</Modified>
+      <Modified>2023-06-13T08:23:24.699</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\bin\x64\Debug\BilibiliDanmu.exe">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\bin\x64\Debug\BilibiliDanmu.exe">
       <PackagePath>entrypoint\BilibiliDanmu.exe</PackagePath>
-      <Modified>2023-06-12T12:54:50.659</Modified>
+      <Modified>2023-06-13T08:23:24.204</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\lyche\.nuget\packages\microsoft.gaming.xboxgamebar\5.8.220627001\runtimes\win10-x64\native\Microsoft.Gaming.XboxGameBar.dll">
+    <AppxPackagedFile Include="C:\Users\Yan_Li1\.nuget\packages\microsoft.gaming.xboxgamebar\5.8.220627001\runtimes\win10-x64\native\Microsoft.Gaming.XboxGameBar.dll">
       <PackagePath>Microsoft.Gaming.XboxGameBar.dll</PackagePath>
       <Modified>2022-06-27T17:13:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\lyche\.nuget\packages\newtonsoft.json\13.0.3\lib\netstandard2.0\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="C:\Users\Yan_Li1\.nuget\packages\newtonsoft.json\13.0.3\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
       <Modified>2023-03-08T07:09:56.000</Modified>
     </AppxPackagedFile>
@@ -50,293 +50,293 @@
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2022-06-10T14:23:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\lyche\.nuget\packages\system.drawing.common\7.0.0\lib\netstandard2.0\System.Drawing.Common.dll">
+    <AppxPackagedFile Include="C:\Users\Yan_Li1\.nuget\packages\system.drawing.common\7.0.0\lib\netstandard2.0\System.Drawing.Common.dll">
       <PackagePath>System.Drawing.Common.dll</PackagePath>
       <Modified>2022-10-18T16:30:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\lyche\.nuget\packages\zxing.net\0.16.9\lib\uap10\zxing.dll">
+    <AppxPackagedFile Include="C:\Users\Yan_Li1\.nuget\packages\zxing.net\0.16.9\lib\uap10\zxing.dll">
       <PackagePath>zxing.dll</PackagePath>
       <Modified>2023-02-22T20:37:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\lyche\.nuget\packages\microsoft.gaming.xboxgamebar\5.8.220627001\lib\uap10.0\Microsoft.Gaming.XboxGameBar.Authentication.winmd">
+    <AppxPackagedFile Include="C:\Users\Yan_Li1\.nuget\packages\microsoft.gaming.xboxgamebar\5.8.220627001\lib\uap10.0\Microsoft.Gaming.XboxGameBar.Authentication.winmd">
       <PackagePath>Microsoft.Gaming.XboxGameBar.Authentication.winmd</PackagePath>
       <Modified>2022-06-27T17:13:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\lyche\.nuget\packages\microsoft.gaming.xboxgamebar\5.8.220627001\lib\uap10.0\Microsoft.Gaming.XboxGameBar.Restricted.winmd">
+    <AppxPackagedFile Include="C:\Users\Yan_Li1\.nuget\packages\microsoft.gaming.xboxgamebar\5.8.220627001\lib\uap10.0\Microsoft.Gaming.XboxGameBar.Restricted.winmd">
       <PackagePath>Microsoft.Gaming.XboxGameBar.Restricted.winmd</PackagePath>
       <Modified>2022-06-27T17:13:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\lyche\.nuget\packages\microsoft.gaming.xboxgamebar\5.8.220627001\lib\uap10.0\Microsoft.Gaming.XboxGameBar.winmd">
+    <AppxPackagedFile Include="C:\Users\Yan_Li1\.nuget\packages\microsoft.gaming.xboxgamebar\5.8.220627001\lib\uap10.0\Microsoft.Gaming.XboxGameBar.winmd">
       <PackagePath>Microsoft.Gaming.XboxGameBar.winmd</PackagePath>
       <Modified>2022-06-27T17:13:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
+    <AppxPackagedFile Include="D:\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2019-03-18T10:36:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\LargeTile.scale-100.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
-      <Modified>2023-06-12T12:11:36.428</Modified>
+      <Modified>2023-06-06T09:22:37.396</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\LargeTile.scale-125.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\LargeTile.scale-125.png">
       <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
-      <Modified>2023-06-12T12:11:36.428</Modified>
+      <Modified>2023-06-06T09:22:37.398</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\LargeTile.scale-150.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\LargeTile.scale-150.png">
       <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
-      <Modified>2023-06-12T12:11:36.428</Modified>
+      <Modified>2023-06-06T09:22:37.400</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\LargeTile.scale-200.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
-      <Modified>2023-06-12T12:11:36.429</Modified>
+      <Modified>2023-06-06T09:22:37.402</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\LargeTile.scale-400.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
-      <Modified>2023-06-12T12:11:36.430</Modified>
+      <Modified>2023-06-06T09:22:37.404</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\SmallTile.scale-100.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
-      <Modified>2023-06-12T12:11:36.430</Modified>
+      <Modified>2023-06-06T09:22:42.319</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\SmallTile.scale-125.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\SmallTile.scale-125.png">
       <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
-      <Modified>2023-06-12T12:11:36.431</Modified>
+      <Modified>2023-06-06T09:22:42.323</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\SmallTile.scale-150.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\SmallTile.scale-150.png">
       <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
-      <Modified>2023-06-12T12:11:36.431</Modified>
+      <Modified>2023-06-06T09:22:42.327</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\SmallTile.scale-200.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
-      <Modified>2023-06-12T12:11:36.431</Modified>
+      <Modified>2023-06-06T09:22:42.330</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\SmallTile.scale-400.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
-      <Modified>2023-06-12T12:11:36.432</Modified>
+      <Modified>2023-06-06T09:22:42.334</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.432</Modified>
+      <Modified>2023-06-06T09:22:42.337</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\SplashScreen.scale-125.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\SplashScreen.scale-125.png">
       <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.432</Modified>
+      <Modified>2023-06-06T09:22:42.339</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\SplashScreen.scale-150.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\SplashScreen.scale-150.png">
       <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.433</Modified>
+      <Modified>2023-06-06T09:22:42.342</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\SplashScreen.scale-400.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.434</Modified>
+      <Modified>2023-06-06T09:22:42.383</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Square150x150Logo.scale-100.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.435</Modified>
+      <Modified>2023-06-06T09:22:42.386</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Square150x150Logo.scale-125.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Square150x150Logo.scale-125.png">
       <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.435</Modified>
+      <Modified>2023-06-06T09:22:42.390</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Square150x150Logo.scale-150.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Square150x150Logo.scale-150.png">
       <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.435</Modified>
+      <Modified>2023-06-06T09:22:42.393</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Square150x150Logo.scale-400.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.436</Modified>
+      <Modified>2023-06-06T09:22:42.401</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.436</Modified>
+      <Modified>2023-06-06T09:22:42.404</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.437</Modified>
+      <Modified>2023-06-06T09:22:42.406</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.437</Modified>
+      <Modified>2023-06-06T09:22:42.409</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.437</Modified>
+      <Modified>2023-06-06T09:22:42.412</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.scale-100.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.437</Modified>
+      <Modified>2023-06-06T09:22:42.416</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.scale-125.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.scale-125.png">
       <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.438</Modified>
+      <Modified>2023-06-06T09:22:42.419</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.scale-150.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.scale-150.png">
       <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.438</Modified>
+      <Modified>2023-06-06T09:22:42.422</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.scale-400.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.438</Modified>
+      <Modified>2023-06-06T09:22:42.428</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.targetsize-16.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.439</Modified>
+      <Modified>2023-06-06T09:22:42.431</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.targetsize-24.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.439</Modified>
+      <Modified>2023-06-06T09:22:42.434</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.targetsize-256.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.439</Modified>
+      <Modified>2023-06-06T09:22:42.439</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.targetsize-32.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.440</Modified>
+      <Modified>2023-06-06T09:22:42.442</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.targetsize-48.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.440</Modified>
+      <Modified>2023-06-06T09:22:42.446</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.440</Modified>
+      <Modified>2023-06-06T09:22:42.449</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\StoreLogo.scale-125.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\StoreLogo.scale-125.png">
       <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.441</Modified>
+      <Modified>2023-06-06T09:22:42.452</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\StoreLogo.scale-150.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\StoreLogo.scale-150.png">
       <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.441</Modified>
+      <Modified>2023-06-06T09:22:42.454</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\StoreLogo.scale-200.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.441</Modified>
+      <Modified>2023-06-06T09:22:42.457</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\StoreLogo.scale-400.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.441</Modified>
+      <Modified>2023-06-06T09:22:42.460</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Wide310x150Logo.scale-100.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.442</Modified>
+      <Modified>2023-06-06T09:22:42.463</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Wide310x150Logo.scale-125.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Wide310x150Logo.scale-125.png">
       <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.442</Modified>
+      <Modified>2023-06-06T09:22:42.466</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Wide310x150Logo.scale-150.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Wide310x150Logo.scale-150.png">
       <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.442</Modified>
+      <Modified>2023-06-06T09:22:42.469</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Wide310x150Logo.scale-400.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.443</Modified>
+      <Modified>2023-06-06T09:22:42.474</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2023-06-12T12:11:36.430</Modified>
+      <Modified>2023-06-06T09:22:42.314</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.433</Modified>
+      <Modified>2023-06-06T09:22:42.345</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.436</Modified>
+      <Modified>2023-06-06T09:22:42.398</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.438</Modified>
+      <Modified>2023-06-06T09:22:42.424</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.439</Modified>
+      <Modified>2023-06-06T09:22:42.436</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.440</Modified>
+      <Modified>2023-06-01T02:31:24.961</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-12T12:11:36.442</Modified>
+      <Modified>2023-06-06T09:22:42.472</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\config.xml">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\config.xml">
       <PackagePath>config.xml</PackagePath>
-      <Modified>2023-06-12T12:25:32.891</Modified>
+      <Modified>2023-06-13T03:07:39.866</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2023-06-12T12:11:36.449</Modified>
+      <Modified>2023-06-01T06:59:16.713</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\bin\x64\Debug\BilibiliDanmu.xr.xml">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\bin\x64\Debug\BilibiliDanmu.xr.xml">
       <PackagePath>BilibiliDanmu.xr.xml</PackagePath>
-      <Modified>2023-06-12T12:52:10.437</Modified>
+      <Modified>2023-06-13T08:16:29.033</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2023-06-12T12:54:50.581</Modified>
+      <Modified>2023-06-13T08:23:24.096</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\bin\x64\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2023-06-12T12:54:50.581</Modified>
+      <Modified>2023-06-13T08:23:24.096</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
       <Modified>2019-03-18T11:50:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
+    <AppxPackagedFile Include="D:\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2019-03-18T09:33:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\lyche\.nuget\packages\microsoft.gaming.xboxgamebar\5.8.220627001\buildTransitive\..\private\Microsoft.Gaming.XboxGameBar.Private.winmd">
+    <AppxPackagedFile Include="C:\Users\Yan_Li1\.nuget\packages\microsoft.gaming.xboxgamebar\5.8.220627001\buildTransitive\..\private\Microsoft.Gaming.XboxGameBar.Private.winmd">
       <PackagePath>Microsoft.Gaming.XboxGameBar.Private.winmd</PackagePath>
       <Modified>2022-06-27T17:13:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-06-12T12:21:35.230</Modified>
+      <Modified>2023-06-13T07:45:53.669</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\WorkSpace\BilibiliDanmu\bin\x64\Debug\Core\BilibiliDanmu.exe">
+    <AppxPackagedFile Include="D:\WorkSpace\BilibiliDanmu\bin\x64\Debug\Core\BilibiliDanmu.exe">
       <PackagePath>BilibiliDanmu.exe</PackagePath>
-      <Modified>2023-06-12T12:54:51.063</Modified>
+      <Modified>2023-06-13T08:23:24.695</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

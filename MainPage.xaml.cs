@@ -17,7 +17,7 @@ using Windows.UI.Text;
 using System.Threading;
 using System.Net.WebSockets;
 using Liluo.BiliBiliLive;
-
+using System.Linq;
 
 namespace BilibiliDanmu
 {
@@ -68,8 +68,7 @@ namespace BilibiliDanmu
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
-             base.OnNavigatedTo(e);
-            // you will need access to the XboxGameBarWidget, in this case it was passed as a parameter when navigating to the widget page, your implementation may differ.
+            base.OnNavigatedTo(e);
             widget = e.Parameter as XboxGameBarWidget;
 
             if (bilibliClient == null)
@@ -84,13 +83,12 @@ namespace BilibiliDanmu
 
             if (widget != null)
             {
-                // Hook up events for when the ui is updated.
                 widget.RequestedOpacityChanged += Widget_RequestedOpacityChanged;
             }
         
             // 读取配置文件
             config = await InitConfigAsync();
-            Task<ClientWebSocket> liveRoomClient = null;
+            txtRoomId.Text = config.RoomId;
             try
             {
                 // 扫描登录二维码
@@ -104,14 +102,10 @@ namespace BilibiliDanmu
 
                 // 登录成功了改变页面样式等等
                 // imgQRCode.Visibility = Visibility.Collapsed;
-                backgroundGrid.Opacity = 0.6;
+                backgroundGrid.Opacity = 0.7;
 
                 // 初始化读取弹幕机
                 InitDanmuShower();
-                //Task.Run(() => TestDamu());
-
-                // 连接弹幕服务器
-                StartLiveRoom(int.Parse(config.RoomId));
 
             } 
             catch (Exception ex)
@@ -147,6 +141,37 @@ namespace BilibiliDanmu
             } while (true);
         }
 
+        private void btnStart_Click(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtRoomId.Text))
+            {
+
+                // 隐藏输入房间号的Grid
+                inputRoomIdGrid.Visibility = Visibility.Collapsed;
+                // 显示统计人数的Grid
+                showCountGrid.Visibility = Visibility.Visible;
+                // 连接弹幕服务器
+                StartLiveRoom(int.Parse(txtRoomId.Text));
+                // Task.Run(TestDamu);
+            }
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            // 隐藏统计人数的Grid
+            showCountGrid.Visibility = Visibility.Collapsed;
+            // 显示输入房间号的Grid
+            inputRoomIdGrid.Visibility = Visibility.Visible;
+            // 清空统计人数的TextBlock
+            currentNum.Text = "正在获取当前人数";
+            // 清空danmuQueue和danmuStackPanel
+            danmuQueue.Clear();
+            danmuStackPanel.Children.Clear();
+
+            // 停止连接弹幕服务器
+            req?.DisConnect();
+        }
+
         private async void Widget_RequestedOpacityChanged(XboxGameBarWidget sender, object args)
         {
             await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
@@ -162,7 +187,7 @@ namespace BilibiliDanmu
         {
             // 定义一个定时器，每隔一段时间读取一个弹幕文本并追加到 TextBlock 控件中
             DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Interval = TimeSpan.FromMilliseconds(500);
             timer.Tick += (sender, args) =>
             {
                 if (danmuQueue.Count > 0)
@@ -178,6 +203,10 @@ namespace BilibiliDanmu
                         FontWeight = FontWeights.Bold,
                         TextWrapping = TextWrapping.Wrap
                     };
+                    if (danmuText.Contains("礼物") || danmuText.Contains("点赞"))
+                    {
+                        danmuBlock.Foreground = new SolidColorBrush(Colors.IndianRed);
+                    }
                     danmuStackPanel.Children.Add(danmuBlock);
                     // 滚动到最底部
                     danmuScrollViewer.UpdateLayout();

@@ -1,25 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "E:\\WorkSpace\\BilibiliDanmu\\BilibiliDanmu.csproj": {}
+    "D:\\WorkSpace\\BilibiliDanmu\\BilibiliDanmu.csproj": {}
   },
   "projects": {
-    "E:\\WorkSpace\\BilibiliDanmu\\BilibiliDanmu.csproj": {
+    "D:\\WorkSpace\\BilibiliDanmu\\BilibiliDanmu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\WorkSpace\\BilibiliDanmu\\BilibiliDanmu.csproj",
+        "projectUniqueName": "D:\\WorkSpace\\BilibiliDanmu\\BilibiliDanmu.csproj",
         "projectName": "BilibiliDanmu",
-        "projectPath": "E:\\WorkSpace\\BilibiliDanmu\\BilibiliDanmu.csproj",
-        "packagesPath": "C:\\Users\\lyche\\.nuget\\packages\\",
-        "outputPath": "E:\\WorkSpace\\BilibiliDanmu\\obj\\",
+        "projectPath": "D:\\WorkSpace\\BilibiliDanmu\\BilibiliDanmu.csproj",
+        "packagesPath": "C:\\Users\\Yan_Li1\\.nuget\\packages\\",
+        "outputPath": "D:\\WorkSpace\\BilibiliDanmu\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "E:\\Program Files\\Common\\NuGetPackages",
+          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\lyche\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Yan_Li1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

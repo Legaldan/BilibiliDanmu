@@ -7,14 +7,42 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid x:ConnectionId='2' x:Name="backgroundGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
-        <Image x:ConnectionId='3' x:Name="imgQRCode" Width="300" Height="300" />
+    <Grid x:ConnectionId='2' x:Name="backgroundGrid">
+        <!--<Image x:Name="imgQRCode" Width="300" Height="300" Visibility="Collapsed" />-->
         <!--<Canvas x:Name="danmuCanvas" VerticalAlignment="Bottom" Background="Gray" Visibility="Collapsed" />-->
-        <!--<TextBlock x:Name="currentNum" FontSize="14" FontWeight="Bold" Foreground="White" Text="test" Height="20" VerticalAlignment="Top"/>-->
-        <ScrollViewer x:ConnectionId='4' x:Name="danmuScrollViewer" Background="DimGray"  VerticalScrollBarVisibility="Hidden">
-            <StackPanel x:ConnectionId='5' x:Name="danmuStackPanel" Orientation="Vertical" />
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="20">
+                <TextBlock x:Name="currentNum" FontSize="14" FontWeight="Bold" Foreground="White" Text="当前人数：100" Height="20" VerticalAlignment="Top"/>
+            </RowDefinition>
+            <RowDefinition>
+                <ScrollViewer x:Name="danmuScrollViewer" Background="DimGray"  VerticalScrollBarVisibility="Hidden">
+                    <StackPanel x:Name="danmuStackPanel" Orientation="Vertical" />
+                </ScrollViewer>
+            </RowDefinition>
+        </Grid.RowDefinitions>-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer x:ConnectionId='3' x:Name="danmuScrollViewer" Background="DimGray"  VerticalScrollBarVisibility="Hidden">
+            <StackPanel x:ConnectionId='10' x:Name="danmuStackPanel" Orientation="Vertical" />
         </ScrollViewer>
-
+        <Grid x:ConnectionId='4' Visibility="Collapsed" x:Name="showCountGrid" Grid.Row="1" Background="White">
+            <TextBlock x:ConnectionId='8' Margin="10,0,0,0" x:Name="currentNum" FontSize="12" FontWeight="Bold" Text="正在获取当前人数" Height="20" VerticalAlignment="Top" Grid.Row="1"/>
+            <!--currentNum右侧放一个按钮，用来关闭当前webwocket连接，按钮的高度和currentNum一样，靠右对齐-->
+            <Button x:ConnectionId='9' x:Name="btnClose"  Margin="0,0,0,0" Foreground="Green" VerticalAlignment="Top" Height="20" Grid.Row="1"                        HorizontalAlignment="Right">
+                <TextBlock FontSize="10" Text="关闭连接" Margin="0,-5,0,-5" />
+            </Button>
+        </Grid>
+        <!--页面最下方放一个输入框和一个按钮，输入框用来输入房间号，按钮用来开始获取弹幕，输入框和按钮是同一个高度-->
+        <Grid x:ConnectionId='5' Visibility="Visible" x:Name="inputRoomIdGrid" Grid.Row="1" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:ConnectionId='6' x:Name="txtRoomId" Grid.Column="0" FontSize="13" Margin="0,0,0,0" PlaceholderText="请输入房间号" VerticalAlignment="Center" Height="30" />
+            <Button x:ConnectionId='7' x:Name="btnStart" Grid.Column="1" Margin="0,0,0,0" Content="开始" VerticalAlignment="Center" Height="30"                        />
+        </Grid>
     </Grid>
 </Page>
 

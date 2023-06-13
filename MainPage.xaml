@@ -27,7 +27,21 @@
         <ScrollViewer x:Name="danmuScrollViewer" Background="DimGray"  VerticalScrollBarVisibility="Hidden">
             <StackPanel x:Name="danmuStackPanel" Orientation="Vertical" />
         </ScrollViewer>
-        <TextBlock x:Name="currentNum" FontSize="14" FontWeight="Bold" Foreground="White" Text="正在获取当前人数" Height="20" VerticalAlignment="Top" Grid.Row="1"/>
-        
+        <Grid Visibility="Collapsed" x:Name="showCountGrid" Grid.Row="1" Background="White">
+            <TextBlock Margin="10,0,0,0" x:Name="currentNum" FontSize="12" FontWeight="Bold" Text="正在获取当前人数" Height="20" VerticalAlignment="Center" Grid.Row="1"/>
+            <!--currentNum右侧放一个按钮，用来关闭当前webwocket连接，按钮的高度和currentNum一样，靠右对齐-->
+            <Button x:Name="btnClose"  Margin="0,0,0,0" Foreground="Green" VerticalAlignment="Top" Height="20" Grid.Row="1" Click="btnClose_Click" HorizontalAlignment="Right">
+                <TextBlock FontSize="10" Text="关闭连接" Margin="0,-5,0,-5" />
+            </Button>
+        </Grid>
+        <!--页面最下方放一个输入框和一个按钮，输入框用来输入房间号，按钮用来开始获取弹幕，输入框和按钮是同一个高度-->
+        <Grid Visibility="Visible" x:Name="inputRoomIdGrid" Grid.Row="1" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="txtRoomId" Grid.Column="0" FontSize="13" Margin="0,0,0,0" PlaceholderText="请输入房间号" VerticalAlignment="Center" Height="30" />
+            <Button x:Name="btnStart" Grid.Column="1" Margin="0,0,0,0" Content="开始" VerticalAlignment="Center" Height="30" Click="btnStart_Click" />
+        </Grid>
     </Grid>
 </Page>
