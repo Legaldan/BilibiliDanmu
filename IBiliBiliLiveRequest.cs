@@ -48,6 +48,11 @@ namespace Liluo.BiliBiliLive
         event Action<string> OnEnterRoomCallBack;
 
         /// <summary>
+        /// 监听点赞回调函数
+        /// </summary>
+        event Action<string> OnLikeCallBack;
+
+        /// <summary>
         /// 监听运行出错时回调函数
         /// </summary>
         event Action<Exception> OnErrorCallBack;

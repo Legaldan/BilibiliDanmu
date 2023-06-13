@@ -7,13 +7,27 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid x:Name="backgroundGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
-        <Image x:Name="imgQRCode" Width="300" Height="300" />
+    <Grid x:Name="backgroundGrid">
+        <!--<Image x:Name="imgQRCode" Width="300" Height="300" Visibility="Collapsed" />-->
         <!--<Canvas x:Name="danmuCanvas" VerticalAlignment="Bottom" Background="Gray" Visibility="Collapsed" />-->
-        <!--<TextBlock x:Name="currentNum" FontSize="14" FontWeight="Bold" Foreground="White" Text="test" Height="20" VerticalAlignment="Top"/>-->
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="20">
+                <TextBlock x:Name="currentNum" FontSize="14" FontWeight="Bold" Foreground="White" Text="当前人数：100" Height="20" VerticalAlignment="Top"/>
+            </RowDefinition>
+            <RowDefinition>
+                <ScrollViewer x:Name="danmuScrollViewer" Background="DimGray"  VerticalScrollBarVisibility="Hidden">
+                    <StackPanel x:Name="danmuStackPanel" Orientation="Vertical" />
+                </ScrollViewer>
+            </RowDefinition>
+        </Grid.RowDefinitions>-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
         <ScrollViewer x:Name="danmuScrollViewer" Background="DimGray"  VerticalScrollBarVisibility="Hidden">
             <StackPanel x:Name="danmuStackPanel" Orientation="Vertical" />
         </ScrollViewer>
-
+        <TextBlock x:Name="currentNum" FontSize="14" FontWeight="Bold" Foreground="White" Text="正在获取当前人数" Height="20" VerticalAlignment="Top" Grid.Row="1"/>
+        
     </Grid>
 </Page>

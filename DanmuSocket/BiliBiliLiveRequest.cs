@@ -59,6 +59,7 @@ namespace Liluo.BiliBiliLive
         public event Action<BiliBiliLiveGuardData> OnGuardCallBack;
         public event Action<BiliBiliLiveSuperChatData> OnSuperChatCallBack;
         public event Action<string> OnEnterRoomCallBack;
+        public event Action<string> OnLikeCallBack;
         public event Action<Exception> OnErrorCallBack;
         public event Action OnDisconnectCallBack;
 
@@ -268,11 +269,14 @@ namespace Liluo.BiliBiliLive
                                     OnSuperChatCallBack?.Invoke(superChatData);
                                     break;
                                 }
-                            case "WELCOME":
-                            case "WELCOME_GUARD":
-                            case "ENTRY_EFFECT":
+                            case "INTERACT_WORD":
                                 {
-                                    OnEnterRoomCallBack?.Invoke(obj["data"]["user_info"]["uname"].ToString());
+                                    OnEnterRoomCallBack?.Invoke(obj["data"]["uname"].ToString());
+                                    break;
+                                }
+                            case "LIKE_INFO_V3_CLICK":
+                                {
+                                    OnLikeCallBack?.Invoke(obj["data"]["uname"].ToString());
                                     break;
                                 }
                             default:
@@ -286,6 +290,9 @@ namespace Liluo.BiliBiliLive
                                     danmuData.guardLevel = obj["info"][7].ToObject<int>();
                                     OnDanmuCallBack?.Invoke(danmuData);
                                     break;
+                                } else
+                                {
+                                    Debug.WriteLine("未知消息" + json);
                                 }
                                 break;
                         }
@@ -293,6 +300,7 @@ namespace Liluo.BiliBiliLive
                     }
                 default:
                     {
+                        Debug.WriteLine("未知消息:" + action + "," + Encoding.UTF8.GetString(buffer, 0, buffer.Length));
                         break;
                     }
             }
